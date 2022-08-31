@@ -1,5 +1,16 @@
+/* Importación de fuentes  */
+@import url("http://fonts.cdnfonts.com/css/distant-galaxy");
+@import url("http://fonts.cdnfonts.com/css/middle-ages");
+
 .App {
   text-align: center;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    286deg,
+    rgba(255, 255, 255, 1) 21%,
+    rgba(255, 255, 255, 0.6393907904958859) 86%
+  );
+  padding: 2em 2em 2em 2em;
 }
 
 .App-logo {
@@ -34,5 +45,87 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* clase de css encargada de dar estilos al div que contiene el buscador */
+.search-input {
+  display: flex;
+  justify-content: right;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+/* clase de css encargada de dar estilos al div y al buscador */
+.box-shadow-input {
+  border-color: #07d7f2;
+  box-shadow: 0 0 20px rgb(45, 0, 245);
+  font-family: "Distant Galaxy", sans-serif;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+/* clase de css encargada de dar estilos al componente modal */
+.box-shadow-card {
+  border-color: #f20707;
+  box-shadow: 0 0 20px rgb(226, 8, 8);
+  font-family: "Distant Galaxy", sans-serif;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+/* clase de css encargada de dar estilos a los encabezados de la tabla del componente modal */
+.box-letter-input {
+  font-family: "Distant Galaxy", sans-serif;
+  text-align: center;
+}
+
+/* clase de css encargada de dar estilos a los encabezados de la tabla del componente TableData  */
+.letter-star {
+  font-family: "Distant Galaxy", sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+/* clase de css encargada de dar estilos a loa información de los personajes de la tabla del componente TableData  y del componente Modal */
+.letter-star-contet {
+  font-family: "Middle Ages", sans-serif;
+}
+
+/* clase que da estilos a los botones de siguiente y anterior */
+.button-star-wars {
+  padding: 1rem 1rem 1rem 1rem;
+  font-family: "Distant Galaxy", sans-serif;
+}
+
+/* Estilos de el spinner */
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid rgb(193, 255, 6);
+  border-color: rgb(193, 255, 6) transparent rgb(193, 255, 6) transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
   }
 }
